@@ -1,0 +1,436 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Butler", sans-serif;
+  background: linear-gradient(135deg, #ffe0ec 0%, #b2f0ff 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 400px;
+  margin: 60px auto;
+  background: #fff8fc;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  padding: 32px 24px 40px 24px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+h1,
+#typewriter-title {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
+  display: inline-block;
+}
+h1 {
+  color: #ff69b4;
+  margin-bottom: 12px;
+  font-size: 1.6em;
+}
+.romantic {
+  color: #ff1493;
+  font-size: 1.1em;
+  margin-bottom: 18px;
+}
+.cute-img {
+  font-size: 2.5em;
+  margin-bottom: 18px;
+}
+button {
+  background: #ffb6c1;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 32px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.2);
+}
+button:hover {
+  background: #ff69b4;
+}
+#surpriseMsg {
+  margin-top: 24px;
+  font-size: 1.2em;
+  color: #e75480;
+  background: #fff0f6;
+  border-radius: 16px;
+  padding: 18px 10px;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.08);
+  animation: pop 0.5s;
+}
+.hidden {
+  display: none;
+}
+@keyframes pop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+/* Balon/Hati Terbang */
+#floating-objects {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 3;
+}
+.floating {
+  position: absolute;
+  font-size: 2.2em;
+  user-select: none;
+  pointer-events: none;
+  animation: floatUp 7s linear infinite;
+}
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.1) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+/* Galeri Foto Slider */
+.gallery-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  gap: 10px;
+}
+.gallery-slider img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 3px solid #ffb6c1;
+}
+.gallery-btn {
+  background: #fff0f6;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5em;
+  color: #ff69b4;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.gallery-btn:hover {
+  background: #ffb6c1;
+  color: #fff;
+}
+button,
+.gallery-btn,
+.gallery-slider img {
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+button:hover,
+.gallery-btn:hover {
+  background: linear-gradient(90deg, #ff69b4 60%, #ffb6c1 100%);
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px rgba(255, 182, 193, 0.25);
+}
+.gallery-slider img:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.25);
+  border-color: #ff69b4;
+}
+.gallery-slider img.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.gallery-slider img.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+/* Kue Ulang Tahun */
+.cake-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.cake {
+  position: relative;
+  width: 70px;
+  height: 90px;
+  margin-bottom: 6px;
+}
+.cake-body {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  width: 50px;
+  height: 40px;
+  background: #ffe0ec;
+  border-radius: 0 0 20px 20px;
+  border: 2px solid #ffb6c1;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.12);
+}
+.cake-base {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  width: 60px;
+  height: 15px;
+  background: #ffb6c1;
+  border-radius: 0 0 20px 20px;
+  border: 2px solid #ff69b4;
+}
+.candle {
+  position: absolute;
+  top: 0;
+  left: 32px;
+  width: 6px;
+  height: 22px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ffb6c1;
+  z-index: 2;
+  cursor: pointer;
+}
+.flame {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 18px;
+  background: radial-gradient(ellipse at center, #fff700 60%, #ffb300 100%);
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  opacity: 0.85;
+  box-shadow: 0 0 12px 4px #fff70099;
+  animation: flameFlicker 0.5s infinite alternate;
+}
+@keyframes flameFlicker {
+  0% {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateX(-50%) scaleY(1.2);
+    opacity: 1;
+  }
+}
+.blow-text {
+  font-size: 0.95em;
+  color: #ff69b4;
+  margin-top: 2px;
+}
+
+/* Tombol Musik */
+.music-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #ffb6c1;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 22px;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.18);
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+}
+.music-btn:hover {
+  background: #ff69b4;
+}
+
+/* Card setelah lilin ditiup */
+#afterBlowCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 240, 246, 0.95);
+  z-index: 20;
+}
+.after-card {
+  background: #fff8fc;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  padding: 36px 28px 32px 28px;
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto;
+  animation: pop 0.5s;
+}
+.after-card h2 {
+  color: #ff69b4;
+  margin-bottom: 12px;
+  font-size: 1.6em;
+}
+.after-card p {
+  color: #e75480;
+  font-size: 1.1em;
+  margin-bottom: 22px;
+}
+.after-card button {
+  background: #ffb6c1;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 28px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(255, 182, 193, 0.2);
+}
+.after-card button:hover {
+  background: #ff69b4;
+}
+.emoji-anim {
+  font-size: 2em;
+  margin: 18px 0 10px 0;
+  animation: heartBounce 1.2s infinite alternate;
+}
+@keyframes heartBounce {
+  0% {
+    transform: scale(1) rotate(-5deg);
+  }
+  50% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(-5deg);
+  }
+}
+.fade-out {
+  animation: fadeOut 0.7s forwards;
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+#lightbox.hidden {
+  display: none;
+}
+.lightbox-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+#lightbox-img {
+  position: relative;
+  z-index: 2;
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  animation: pop 0.3s;
+}
+/* Animasi Floating Cake */
+.cake-container .cake {
+  animation: floatingCake 2.5s ease-in-out infinite alternate;
+}
+@keyframes floatingCake {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+/* Animasi Bounce/Fade-in Judul */
+#typewriter-title,
+h1 {
+  animation: bounceIn 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(-40px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) translateY(10px);
+  }
+  80% {
+    transform: scale(0.95) translateY(-4px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+/* Animasi Hover Shake pada Emoji dan Tombol Musik */
+.cute-img:hover,
+.emoji-anim:hover,
+.music-btn:hover {
+  animation: shake 0.4s;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-4px);
+  }
+  40% {
+    transform: translateX(4px);
+  }
+  60% {
+    transform: translateX(-3px);
+  }
+  80% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

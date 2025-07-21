@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selamat Ulang Tahun, Cindy!</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Import Butler font from Google Fonts atau CDN jika tersedia -->
+    <link href="https://fonts.cdnfonts.com/css/butler" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <span
+          id="typewriter-title"
+          data-text="🎉 Happy 21st Birthday, Cindy! 🎂"
+        ></span>
+      </h1>
+      <p class="romantic">
+        Semoga hari spesialmu ini dipenuhi tawa, cinta, dan kebahagiaan. Semoga
+        hari harimu menyengangkan! 🎈
+      </p>
+      <div class="cute-img">❤️🥰🎈</div>
+      <!-- Galeri Foto Slider -->
+      <div class="gallery-slider">
+        <button class="gallery-btn" id="prevPhoto">&#8592;</button>
+        <img
+          id="galleryPhoto"
+          src="img/WhatsApp Image 2025-07-18 at 10.17.46(1).jpeg"
+          alt="Kenangan Romantis"
+        />
+        <button class="gallery-btn" id="nextPhoto">&#8594;</button>
+      </div>
+      <!-- Kue Ulang Tahun -->
+      <div class="cake-container">
+        <div class="cake">
+          <div class="candle">
+            <div class="flame" id="flame"></div>
+          </div>
+          <div class="cake-body"></div>
+          <div class="cake-base"></div>
+        </div>
+        <p class="blow-text">Klik lilin untuk meniup!</p>
+      </div>
+      <button id="surpriseBtn">Klik untuk Kejutan!</button>
+      <div id="surpriseMsg" class="hidden">
+        <p>
+          💌Selamat ulang tahun! Doaku untukmu,💌<br />semoga Allah memberikan
+          kesehatan, keberkahan rezeki, dan kemudahan dalam segala urusan.
+          Semoga bertambahnya usia ini semakin mendekatkanmu kepada Allah dan
+          membuatmu menjadi pribadi yang lebih sabar, ikhlas, dan penuh rasa
+          syukur <br /><b>Happy Birthday, Bocil!</b>
+        </p>
+      </div>
+    </div>
+    <!-- Card Make a Wish -->
+    <div id="makeAWishCard" class="hidden">
+      <div class="after-card">
+        <h2>✨ Make a Wish! ✨</h2>
+        <p>
+          Eitss kamu sudah meniup lilinnya namun belum berdoa, ucapkan harapanmu
+          yang paling indah! Semoga semua keinginanmu terkabul di hari spesial
+          ini. 🎂💫
+        </p>
+        <button id="nextCardBtn">Lihat Kejutan Selanjutnya</button>
+      </div>
+    </div>
+    <!-- Card Selanjutnya -->
+    <div id="nextCard" class="hidden">
+      <div class="after-card">
+        <h2>💖 Kejutan Spesial! 💖</h2>
+        <p>
+          Cindy, wanita hebat yang luar biasa… Di balik senyum dan langkahmu
+          yang tenang, aku tahu ada banyak hal yang telah kamu lewati. Kamu
+          tidak hanya kuat, tapi juga tulus, sabar, dan penuh semangat kualitas
+          yang tak semua orang punya. Jika suatu hari kamu merasa lelah, ingatye
+          cin kamu sudah sejauh ini bukan untuk berhenti. Kamu punya cahaya
+          dalam dirimu sendiri, Cindy, dan dunia ini lebih indah karena kamu
+          tidak pernah berhenti bersinar. Teruslah melangkah dengan hati yang
+          teguh dan penuh harapan. Kamu bukan hanya hebat, kamu menginspirasi.!
+          🥰🎉
+        </p>
+        <div class="emoji-anim">❤️💖💗💝💘</div>
+        <button id="backToStartBtn">Kembali ke Awal</button>
+      </div>
+    </div>
+    <!-- Hapus card Make a Wish di bawah ini -->
+    <!-- Card setelah lilin ditiup -->
+    <!-- <div id="afterBlowCard" class="hidden">
+      <div class="after-card">
+        <h2>✨ Make a Wish! ✨</h2>
+        <p>
+          Semoga semua harapan dan doamu di hari spesial ini dikabulkan. Jangan
+          lupa tiup lilinnya dan ucapkan harapanmu! 🎂💫
+        </p>
+        <button id="relightBtn">Nyalakan Lilin Lagi</button>
+      </div>
+    </div> -->
+    <!-- Balon/Hati Terbang -->
+    <div id="floating-objects"></div>
+    <!-- Musik Ulang Tahun -->
+    <audio
+      id="birthdayMusic"
+      src="music/happy-birthday-220024.mp3"
+      <!--
+      Ganti
+      dengan
+      file
+      atau
+      link
+      musik
+      kamu
+      --
+    >
+      autoplay loop >
+    </audio>
+    <button id="musicToggle" class="music-btn">⏸️ Musik</button>
+    <canvas id="confetti"></canvas>
+    <div id="lightbox" class="hidden">
+      <div class="lightbox-backdrop"></div>
+      <img id="lightbox-img" src="" alt="Foto Galeri" />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
